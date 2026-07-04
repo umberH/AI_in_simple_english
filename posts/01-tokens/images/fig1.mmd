@@ -1,0 +1,17 @@
+flowchart TD
+    A["Raw text\n'ChatGPT is amazing.'"]
+    B["Tokens\n'Chat'  ·  'G'  ·  'PT'  ·  ' is'  ·  ' amazing'  ·  '.'"]
+    C["Token IDs\n14176  ·  38  ·  2049  ·  374  ·  8056  ·  13"]
+    D["Embedding Matrix\n~100,000 rows  ×  3,072 numbers per row"]
+    E1["row 14176\n[0.23, −0.81, 0.04, ...]"]
+    E2["row 38\n[0.09, 0.44, −0.67, ...]"]
+    E3["row 2049\n[−0.31, 0.12, 0.88, ...]"]
+    EN["... 3 more rows"]
+
+    A -->|"Tokenizer splits text into chunks"| B
+    B -->|"Each chunk mapped to a unique integer"| C
+    C -->|"Each ID fetches one row"| D
+    D --> E1
+    D --> E2
+    D --> E3
+    D --> EN
