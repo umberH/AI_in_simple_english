@@ -1,0 +1,2 @@
+# Core dependencies for AI in Simple English series
+tiktoken>=0.5.0
