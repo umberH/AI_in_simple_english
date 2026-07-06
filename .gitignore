@@ -1,0 +1,40 @@
+# ── PRIVATE — never commit these ──────────────────────────
+.env
+pipeline/state.json
+pipeline/logs/
+pipeline/config.yaml
+
+# ── Python ────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+
+# ── Jupyter ───────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ── OS ────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Editors ───────────────────────────────────────────────
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# ── Build / site output ───────────────────────────────────
+_site/
+.jekyll-cache/
+node_modules/
+
+# ── Images (large generated files — track with Git LFS) ───
+# Uncomment if images get large:
+# *.png
+# *.jpg
+# *.jpeg
