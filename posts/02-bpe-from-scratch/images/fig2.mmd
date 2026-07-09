@@ -1,0 +1,9 @@
+flowchart TD
+    subgraph Vocab["Vocabulary Growth Over Merges"]
+        A["Start\n256 byte tokens\n(characters)"] -->|"merge 1: 'e'+'r'→'er'"| B["257 tokens"]
+        B -->|"merge 2: 'o'+'w'→'ow'"| C["258 tokens"]
+        C -->|"merge 3: 'l'+'ow'→'low'"| D["259 tokens"]
+        D -->|"... N merges later ..."| E["256 + N tokens\n(target vocab size)"]
+    end
+    style A fill:#f0f0f0
+    style E fill:#d0e8ff

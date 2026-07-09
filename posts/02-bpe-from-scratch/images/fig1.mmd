@@ -1,0 +1,8 @@
+flowchart LR
+    subgraph Iteration["BPE Merge — One Step"]
+        direction LR
+        A["Corpus\n'low', 'low', 'lower',\n'newer', 'wider'"] --> B["Count Pairs\nlo×2, lo×2, ow×4,\nwe×2, er×3, ..."]
+        B --> C["Find Most Frequent\n'o' + 'w' = 4"]
+        C --> D["Merge → New Token\n'ow'"]
+        D --> E["Updated Corpus\n'l ow', 'l ow', 'l ow er',\n'n ew er', 'w id er'"]
+    end
